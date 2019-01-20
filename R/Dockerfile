@@ -19,4 +19,4 @@ RUN git clone https://github.com/Microsoft/LightGBM && \
 COPY . /usr/local/src/myscripts/
 WORKDIR /usr/local/src/myscripts/
 
-RUN Rscript -e "pkgs <- readLines('requirement.txt'); for(p in pkgs){if(! require(p,character.only = T)) install.packages(p)}"
+RUN Rscript -e "pkgs <- readLines('requirements.txt'); for(p in pkgs){if(! require(p,character.only = T)) install.packages(p)}"
